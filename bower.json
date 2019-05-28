@@ -1,0 +1,10 @@
+{
+  "name": "news-scraper",
+  "description": "News Scraper Application",
+  "main": "server.js",
+  "authors": ["Mohamed Samara (https://github.com/mohamedsamara)"],
+  "license": "ISC",
+  "keywords": ["node", "express", "express-handlebars", "mongoose", "cheerio"],
+  "homepage": "https://github.com/mohamedsamara/News-Scraper",
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"]
+}
