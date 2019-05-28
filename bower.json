@@ -2,9 +2,28 @@
   "name": "news-scraper",
   "description": "News Scraper Application",
   "main": "server.js",
-  "authors": ["Mohamed Samara (https://github.com/mohamedsamara)"],
+  "authors": [
+    "Mohamed Samara (https://github.com/mohamedsamara)"
+  ],
   "license": "ISC",
-  "keywords": ["node", "express", "express-handlebars", "mongoose", "cheerio"],
+  "keywords": [
+    "node",
+    "express",
+    "express-handlebars",
+    "mongoose",
+    "cheerio"
+  ],
   "homepage": "https://github.com/mohamedsamara/News-Scraper",
-  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"]
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "components-font-awesome": "^5.4.2"
+  }
 }
