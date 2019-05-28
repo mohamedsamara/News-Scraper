@@ -1,0 +1,27 @@
+{
+  "name": "news-scraper",
+  "version": "1.0.0",
+  "description": "News Scraper Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedsamara/News-Scraper.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "express-handlebars",
+    "mongoose",
+    "cheerio"
+  ],
+  "author": "Mohamed Samara (https://github.com/mohamedsamara)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedsamara/News-Scraper/issues"
+  },
+  "homepage": "https://github.com/mohamedsamara/News-Scraper#readme"
+}
