@@ -33,6 +33,8 @@ npm start
 
 - [Express](https://expressjs.com/)
 
+- [Mongoose](https://mongoosejs.com/)
+
 - [Express Handlebars](https://github.com/ericf/express-handlebars)
 
 - [Bower](https://bower.io/)

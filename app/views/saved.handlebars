@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12 jumbotron">
+        <div class="text-center title">
+            <i class="fa fa-save fa-8x"></i>
+            <h3>Saved Articles</h3>
+        </div>
+    </div>
+    <div class="col-md-12">
+        {{#if article}}
+        {{#each article}}
+        <div class="panel-saved panel-default mt-5" data-toggle="collapse" data-target="#collapse-{{this._id}}"
+            aria-expanded="false" aria-controls="collapse-{{this._id}}">
+            <div class="panel-heading d-flex justify-content-between align-items-center">
+                <h4>{{this.title}}</h4>
+                <i class="fa fa-chevron-down fa-2x" title="Expand to view"></i>
+            </div>
+            <div class="collapse" id="collapse-{{this._id}}">
+                <div class="panel-body">
+                    <p> {{this.summary}}</p>
+                    <a href={{this.link}} target="_blank">{{this.link}}</a>
+                    <br><br>
+                    <button type="button" class="btn btn-success addNote">View/Add Notes</button>
+                    <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>You have no saved articles.</h4>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
+</div>

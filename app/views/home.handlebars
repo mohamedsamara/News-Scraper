@@ -1,9 +1,35 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <i class="fab fa-facebook-square"></i>
-        <h1 class="display-4 d-inline">Friend Finder</h1>
-        <p class="lead mb-10">Answer a few basic questions.
-            Then find the friend with the greatest compatibility!</p>
-        <a href="/survey" class="btn btn-dark survey-btn">Survey</a>
+<div class="row">
+    <div class="col-md-12 jumbotron">
+        <div class="text-center title">
+            <i class="fa fa-newspaper fa-8x"></i>
+            <h3>New York Times</h3>
+        </div>
+    </div>
+    <div class="col-md-12">
+        {{#if article}}
+        {{#each article}}
+        <form action="/article/save/{{this._id}}" method="POST">
+            <div class="panel-box panel-default mt-5">
+                <div class="panel-heading">
+                    <h4>{{this.title}}</h4>
+                </div>
+                <div class="panel-body">
+                    <p> {{this.summary}}</p>
+                    <a href={{this.link}} target="_blank" class="article-link">{{this.link}}</a>
+
+                    <button type="submit" class="btn-save mt-3">
+                        Save Article
+                    </button>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>oops! Looks like we don't have any new articles.</h4>
+                </div>
+            </div>
+            {{/if}}
+        </form>
     </div>
 </div>
