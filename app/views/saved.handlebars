@@ -8,21 +8,28 @@
     <div class="col-md-12">
         {{#if article}}
         {{#each article}}
-        <div class="panel-saved panel-default mt-5" data-toggle="collapse" data-target="#collapse-{{this._id}}"
-            aria-expanded="false" aria-controls="collapse-{{this._id}}">
-            <div class="panel-heading d-flex justify-content-between align-items-center">
+        <div class="panel-saved panel-default mt-5">
+            <div class="panel-heading">
                 <h4>{{this.title}}</h4>
-                <i class="fa fa-chevron-down fa-2x" title="Expand to view"></i>
             </div>
-            <div class="collapse" id="collapse-{{this._id}}">
-                <div class="panel-body">
-                    <p> {{this.summary}}</p>
-                    <a href={{this.link}} target="_blank">{{this.link}}</a>
-                    <br><br>
-                    <button type="button" class="btn btn-success addNote">View/Add Notes</button>
-                    <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
+            <div class="panel-body">
+                <p> {{this.summary}}</p>
+                <a href={{this.link}} target="_blank" class="article-link">{{this.link}}</a>
+                <div class="d-flex justify-content-between align-items-center mt-5">
+                    <button type="submit" id="btn-delete" class="btn-save mt-3" data-id={{this._id}}>
+                        Delete
+                    </button>
+                    <i class="fa fa-comment fa-2x" title="Add comment" data-toggle="collapse"
+                        data-target="#collapse-{{this._id}}" aria-expanded="false"
+                        aria-controls="collapse-{{this._id}}"></i>
                 </div>
+
+                <div class="collapse" id="collapse-{{this._id}}">
+                    {{> comment }}
+                </div>
+
             </div>
+
         </div>
         {{/each}}
         {{else}}

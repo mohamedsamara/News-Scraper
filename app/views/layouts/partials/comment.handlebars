@@ -1,0 +1,32 @@
+<div class="mt-5">
+
+    {{#if this.comments}}
+    <div class="comments">
+        {{#each this.comments}}
+        <div class="comment-box col-md-6">
+            <div class="d-flex justify-content-between align-items-center mt-5">
+                <p> {{this.body}}</p>
+                <button type="button" class="btn btn-danger" id="delete-comment" data-comment={{this._id}}
+                    data-article={{this.article}}>X</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>No comments yet!</h4>
+        </div>
+    </div>
+    {{/if}}
+
+    <form action="/comment/save/{{this._id}}" method="POST" class="mt-5">
+        <div class="form-group">
+            <textarea name="comment" class="form-control" rows="4" placeholder="Please add comment here"></textarea>
+        </div>
+
+        <button type="submit" class="btn-save mt-3">
+            Save Comment
+        </button>
+    </form>
+</div>

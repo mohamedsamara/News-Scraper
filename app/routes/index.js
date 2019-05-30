@@ -86,6 +86,73 @@ router.post('/article/save/:id', (req, res) => {
   });
 });
 
+// Delete an article
+router.post('/article/delete/:id', function(req, res) {
+  let query = { _id: req.params.id };
+
+  Article.updateOne(query, { saved: false, comments: [] }).exec(function(
+    err,
+    doc
+  ) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(doc);
+    }
+  });
+});
+
+// Create a new comment
+router.post('/comment/save/:id', function(req, res) {
+  const newComment = new Comment({
+    body: req.body.comment,
+    article: req.params.id
+  });
+
+  let query = { _id: req.params.id };
+
+  newComment.save((error, comment) => {
+    if (error) {
+      console.log(error);
+    } else {
+      Article.updateOne(query, { $push: { comments: comment } }).exec(function(
+        err
+      ) {
+        if (err) {
+          console.log(err);
+          res.send(err);
+        } else {
+          res.redirect('/saved');
+        }
+      });
+    }
+  });
+});
+
+// Delete an article comment
+router.delete('/comment/delete/:comment_id/:article_id', (req, res) => {
+  let commentId = { _id: req.params.comment_id };
+  let articleId = { _id: req.params.article_id };
+
+  Comment.deleteOne(commentId, function(err) {
+    if (err) {
+      console.log(err);
+      res.send(err);
+    } else {
+      Article.updateOne(articleId, {
+        $pull: { comments: commentId }
+      }).exec(function(err) {
+        if (err) {
+          console.log(err);
+          res.send(err);
+        } else {
+          res.send('Comment Deleted');
+        }
+      });
+    }
+  });
+});
+
 // 404 not found view
 router.get('*', (req, res) => {
   res.render('404Page');

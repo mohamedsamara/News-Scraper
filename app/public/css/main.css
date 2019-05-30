@@ -57,20 +57,29 @@ h5 {
   color: #4a68aa;
 }
 
-.panel-saved {
+.fa-bars {
+  color: #fff;
+}
+
+.fa-comment {
   cursor: pointer;
+}
+
+.comment-box {
+  background-color: #fff;
+}
+
+.comment-box p {
+  margin: 0;
+}
+
+.panel-saved {
   padding: 30px;
   background-color: #f5f5f5;
-  border: 1px solid #f5f5f5;
 }
 
 .panel-saved:hover {
-  border: 1px solid #4a68aa;
-}
-
-.panel-saved[aria-expanded='true'] {
-  cursor: default;
-  border: 1px solid #4a68aa;
+  box-shadow: 1px 1px #cccccc;
 }
 
 .panel-box {

@@ -23,7 +23,13 @@ app.use(express.static(path.join(__dirname, 'app/public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine(
+  'handlebars',
+  exphbs({
+    defaultLayout: 'main',
+    partialsDir: path.join(__dirname, 'app/views/layouts/partials')
+  })
+);
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'handlebars');
 
