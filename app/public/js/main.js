@@ -4,7 +4,6 @@ $(document).ready(function() {
       method: 'GET',
       url: '/scrape'
     }).done(function(data) {
-      console.log(data);
       window.location = '/';
     });
   });
@@ -26,7 +25,6 @@ $(document).ready(function() {
       method: 'DELETE',
       url: '/comment/delete/' + commentId + '/' + articleId
     }).done(function(data) {
-      console.log(data);
       window.location = '/saved';
     });
   });

@@ -33,6 +33,7 @@ h5 {
   height: 60px;
   line-height: 60px;
   background-color: #f5f5f5;
+  border: 1px solid #cccccc40;
 }
 
 .news-title {
@@ -66,6 +67,7 @@ h5 {
 }
 
 .comment-box {
+  padding-right: 0;
   background-color: #fff;
 }
 
@@ -132,11 +134,52 @@ h5 {
   background-color: #4a68aa;
 }
 
+.btn-delete {
+  padding: 10px;
+  border: none;
+  background-color: #d93025;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: #a94442;
+}
+
+#scrape-btn:focus {
+  box-shadow: none;
+}
+
+#messages {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#messages .success {
+  list-style: none;
+  padding: 20px;
+  background-color: rgba(0, 123, 255, 0.25);
+  border: 1px solid #4a68aa21;
+}
+
+#messages .error {
+  list-style: none;
+  padding: 20px;
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+}
+
 /* end application styles */
 
 /* start bootstrap overrides */
 .navbar {
   background-color: #d93025 !important;
+}
+
+.form-control:focus {
+  border-color: #d93025;
+  box-shadow: 0 0 0 0.01rem rgb(217, 48, 37);
 }
 
 /* end bootstrap overrides */

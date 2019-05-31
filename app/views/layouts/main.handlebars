@@ -26,7 +26,8 @@
             <div class="collapse navbar-collapse" id="links">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <button type="button" class="nav-link btn btn-default" id="scrape-btn">Scrape Articles</button>
+                        <button type="button" class="nav-link btn btn-default" data-toggle="modal"
+                            data-target="#loading-modal" id="scrape-btn">Scrape Articles</button>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/saved">Saved Articles</a>
@@ -39,7 +40,14 @@
 
     <div class="wrapper">
         <div class="container">
+            {{#if messages}}
+            {{> message }}
+            {{/if}}
+
             {{{body}}}
+
+            {{> modal }}
+
         </div>
     </div>
 
