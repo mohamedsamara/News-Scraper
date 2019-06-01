@@ -11,6 +11,11 @@ This application scrapes articles from the New York Times website and lets users
   * Express Handlebars are implemented to generate the HTML 
 
 
+## Demo
+	
+News Scraper is deployed on Heroku. Please check it out [here](https://afternoon-atoll-26035.herokuapp.com/).
+
+
 ## Install
 
 Some basic Git commands are:
