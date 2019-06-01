@@ -37,5 +37,9 @@ npm start
 
 - [Express Handlebars](https://github.com/ericf/express-handlebars)
 
+- [Express Validator](https://express-validator.github.io/docs/)
+
+- [Express Messages](https://github.com/visionmedia/express-messages)
+
 - [Bower](https://bower.io/)
 
