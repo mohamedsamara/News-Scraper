@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohamedsamara/News-Scraper.git"
+    "url": "git+https://github.com/mohamedsamara/news-scraper.git"
   },
   "keywords": [
     "node",
@@ -21,9 +21,9 @@
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mohamedsamara/News-Scraper/issues"
+    "url": "https://github.com/mohamedsamara/news-scraper/issues"
   },
-  "homepage": "https://github.com/mohamedsamara/News-Scraper#readme",
+  "homepage": "https://github.com/mohamedsamara/news-scraper#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",

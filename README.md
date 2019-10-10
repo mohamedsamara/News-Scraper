@@ -21,7 +21,7 @@ News Scraper is deployed on Heroku. Please check it out [here](https://afternoon
 Some basic Git commands are:
 
 ```
-$ git clone https://github.com/mohamedsamara/News-Scraper.git
+$ git clone https://github.com/mohamedsamara/news-scraper.git
 $ cd project
 $ npm install
 $ bower install
