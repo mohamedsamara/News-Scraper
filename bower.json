@@ -13,7 +13,7 @@
     "mongoose",
     "cheerio"
   ],
-  "homepage": "https://github.com/mohamedsamara/News-Scraper",
+  "homepage": "https://github.com/mohamedsamara/news-scraper#readme",
   "ignore": [
     "**/.*",
     "node_modules",
