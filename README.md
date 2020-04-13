@@ -8,12 +8,7 @@ This application scrapes articles from the New York Times website and lets users
   * Node provides the backend environment for this application
   * Express middleware is used to handle requests, routes and views
   * Mongoose schemas to model the application data
-  * Express Handlebars are implemented to generate the HTML 
-
-
-## Demo
-	
-News Scraper is deployed on Heroku. Please check it out [here](https://afternoon-atoll-26035.herokuapp.com/).
+  * Express Handlebars engine to generate the HTML 
 
 
 ## Install
@@ -24,7 +19,6 @@ Some basic Git commands are:
 $ git clone https://github.com/mohamedsamara/news-scraper.git
 $ cd project
 $ npm install
-$ bower install
 
 ```
 

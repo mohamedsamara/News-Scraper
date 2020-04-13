@@ -13,7 +13,7 @@ const Article = require('../models/article'),
 router.get('/', (req, res) => {
   Article.find({ saved: false }, function(error, data) {
     const hbsObject = {
-      article: data
+      article: data.map(article => article.toJSON())
     };
     res.render('home', hbsObject);
   });
@@ -25,7 +25,7 @@ router.get('/saved', (req, res) => {
     .populate('comments')
     .exec(function(error, articles) {
       const hbsObject = {
-        article: articles
+        article: articles.map(article => article.toJSON()) 
       };
 
       res.render('saved', hbsObject);

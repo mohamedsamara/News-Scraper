@@ -1,6 +1,6 @@
 {
   "name": "news-scraper",
-  "description": "News Scraper Application",
+  "description": "News Scraper",
   "main": "server.js",
   "authors": [
     "Mohamed Samara (https://github.com/mohamedsamara)"
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "components-font-awesome": "^5.4.2"
+    "font-awesome-5": "^5.13.0",
+    "jquery": "^1.12.4"
   }
 }
