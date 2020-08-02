@@ -19,7 +19,6 @@ Some basic Git commands are:
 $ git clone https://github.com/mohamedsamara/news-scraper.git
 $ cd project
 $ npm install
-
 ```
 
 ## Start
